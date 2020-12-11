@@ -32,8 +32,8 @@ const TrackingDetails = ({ activeTable, selectedRecordId, trackingNumber }) => {
 
   useEffect(() => {
         getTrackingInfo({
-          carrier: "shippo",
-          trackingNumber: trackingNumber.includes('SHIPPO_') ? trackingNumber : 'SHIPPO_DELIVERED', //force to use test tracking
+          carrier: "UPS",
+          trackingNumber: trackingNumber
           onSuccess: (data) => {
             setLoading(false);
             setTrackingInfos(data);
